@@ -1,0 +1,146 @@
+.ai-image-generator {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+.header {
+    font-size: 50px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.header span {
+    color: #DE1B89;
+    font-weight: 600;
+}
+
+.img-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-loading img {
+    width: 100%;
+    max-width: 512px;
+    height: 365px;
+    border-radius: 10px;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    height: 80px;
+    align-items: center;
+    border-radius: 50px;
+    background: #1f3540;
+    padding: 0 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    position: relative;
+    overflow: hidden; /* Prevent overflow if content is too wide */
+}
+
+.serch-input {
+    flex-grow: 1; /* Allow input to take up remaining space */
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    padding-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.serch-input::placeholder {
+    color: #999;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 70px;
+    font-size: 18px;
+    border-radius: 50px;
+    background: #DE1B89;
+    cursor: pointer;
+    position: absolute;
+    right: -0.4px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Medium screens (tablets, large smartphones) */
+@media (max-width: 768px) {
+    .header {
+        font-size: 40px;
+        padding-bottom: 15px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        position: static; /* Reset position for smaller screens */
+    }
+
+    .serch-input {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        max-width: 100%;
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+        position: static; /* Reset position for smaller screens */
+        margin-top: 10px; /* Ensure spacing between input and button */
+    }
+}
+
+/* Small screens (small smartphones) */
+@media (max-width: 480px) {
+    .header {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+
+    .img-loading img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .search-box {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .serch-input {
+        font-size: 16px;
+        padding-left: 10px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        margin-top: 0; /* No extra margin needed */
+    }
+}
